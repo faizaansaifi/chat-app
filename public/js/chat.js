@@ -6,6 +6,8 @@ const $messageFormInput = $messageForm.querySelector('input')
 const $messageFormButton = $messageForm.querySelector('button')
 const $sendLocationButton = document.querySelector('#send-location')
 const $messages = document.querySelector('#messages')
+const $logoutButton = document.querySelector('#logout')
+console.log($logoutButton,'----')
 
 // Templates
 const messageTemplate = document.querySelector('#message-template').innerHTML
@@ -86,6 +88,10 @@ $messageForm.addEventListener('submit', (e) => {
 
         console.log('Message delivered!')
     })
+})
+
+$logoutButton.addEventListener('click', () => {
+   location.href = '/'
 })
 
 $sendLocationButton.addEventListener('click', () => {
